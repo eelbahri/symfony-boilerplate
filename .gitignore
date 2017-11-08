@@ -1,3 +1,4 @@
+# Symfony
 /.web-server-pid
 /app/config/parameters.yml
 /build/
@@ -16,8 +17,14 @@
 /vendor/
 /web/bundles/
 
-.idea
+# PHPStorm
+/.idea
 
-.env
-.logs
-.data
+# Docker
+/.env
+/.logs
+/.data
+
+# Webpack and front dependencies
+/node_modules
+/web/build

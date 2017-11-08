@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "encore dev",
+    "watch": "encore dev --watch",
+    "prod": "encore production"
+  },
+  "devDependencies": {
+    "@symfony/webpack-encore": "^0.17.0",
+    "jquery": "^3.2.1",
+    "node-sass": "^4.6.0",
+    "sass-loader": "^6.0.6"
+  }
+}
