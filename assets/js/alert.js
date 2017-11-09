@@ -1,22 +1,25 @@
-const $ = require('jquery');
-
-module.exports =
+module.exports = function ($) {
     $(document).ready(function () {
         $('.alert').each(function () {
             let message = $(this).data('alert-message');
+            let type    = $(this).data('alert-type');
             let icon;
-            let color;
+            let thus    = $(this);
 
-            switch ($(this).data('alert-type')) {
+            switch (type) {
                 case 'success':
-                    color = 'green';
-                    icon  = 'done';
+                    icon = 'done';
                     break;
                 case 'danger':
-                    color = 'red';
-                    icon  = 'report_problem';
+                    icon = 'close';
+                    break;
+                case 'warning':
+                    icon = 'warning';
                     break;
             }
-            Materialize.toast(`<i class="material-icons left">${icon}</i> ${message}`, 10000, color);
+            Materialize.toast(`<i class="material-icons left">${icon}</i> ${message}`, 10000, type, function () {
+                thus.remove();
+            });
         });
-    });
+    })
+};
