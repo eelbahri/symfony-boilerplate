@@ -4,12 +4,18 @@ ARG TIMEZONE
 
 RUN apt-get update && apt-get install -y \
     openssl \
-    git \
-    unzip
+    git-flow \
+    unzip \
+    zsh \
+    wget
 
 # Install Composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN composer --version
+
+# Install Oh-my-zsh
+RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
+RUN sed -i s/'ZSH_THEME="robbyrussell"'/'ZSH_THEME="avit"'/g ~/.zshrc
 
 # Set timezone
 RUN ln -snf /usr/share/zoneinfo/${TIMEZONE} /etc/localtime && echo ${TIMEZONE} > /etc/timezone
@@ -18,7 +24,6 @@ RUN "date"
 
 # Type docker-php-ext-install to see available extensions
 RUN docker-php-ext-install pdo pdo_mysql
-
 
 # install xdebug
 RUN pecl install xdebug
