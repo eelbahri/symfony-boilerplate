@@ -3,15 +3,11 @@ php:
 - '7.1'
 before_script:
 - composer install
-- composer require squizlabs/php_codesniffer
+#- composer require squizlabs/php_codesniffer
 script:
 - docker run --rm -v $(pwd):/app phpqa/security-checker security:check
-- ./vendor/bin/phpcs src
+#- ./vendor/bin/phpcs src
 notifications:
   email:
     on_success: change
     on_failure: always
-deploy:
-  provider: heroku
-  api_key:
-    secure: Ma/BhGWzWOpxsTsGBpUIG0d3g/TPAwWGv4nT8eDRBlK/pCOVqdSPDA6iDTIVX+kW4YdtcCdVC9YVIrHj6W1Un/M89GU4CT4ThTgHMNaPShYbt0oEv2RVheGBBCfAJKSZa9NLgNbNn8jDfkYUS25g4YWdZoX3X+nrMyM3jgIyG1kqgA5d5p91JaxHiQgGsmmUSZIlE5SKUC3+w+0ruUxW/far2iVmqoexGU/w3tDMKsjVgHiatd+OAKfFBE3Rlz8ta6henivtI0w5UBFQpIUvPYxPL9z55V7XV0nRX02KvuQfEwWILLQ20kDA5eDJylo+GfKBuV+T802YziOSqvWHDK2SXkK/SGoBJdxPzYfgbsHzvoRGUm6q3w+DWUNevTPytoaSVQ5J2XvLwkfh/FFJowIB/36Ol8lhxg/MtPdyiv2zUlLsfKVPpg/I4NTwrIfLTWi/FpBF2y/mI/BlSdY42OGYmplFti4o+kp5zFdUn+fSZ0TujmxWnvhpwfbOcZGETnWcyQYNU/8Jg0VD7VZLlLL1lX0BAB4f+n0KyTBfNPHaNd9mMtFv67H3PAacF5wgryK3ViSd5bmdQDDZGHb4HnmzNVg4EWLgoTfYSI3t3CvPRG7pGl5wJNd6rlCwf+yl2VwqmpToMA6jKzfImzd42t/raB33jBP75LECMUQqHDA=
