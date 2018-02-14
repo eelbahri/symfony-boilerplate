@@ -10,6 +10,6 @@ deploy:
   provider: heroku
   api_key:
     secure: WzO+84ovM1i94Alq99O/QOuB9gmsJqQk96uRpd+ec/LEVi/rumRaFRavALsq6/XtQUq/MQlKUH1fy/ML3p0s6750O7C/e9S+Sfk5aPPZLKUKOvX0FKDfwpfk1IsJhKfla4pZbciIM/NCgsK1bqdpiMuOa/GQ1eTAc06r0sOO3AsF4wAGhv/ODl69mL+BuKBz+Akt4cbE7q7WrO0VtgM6MOGIB09bvt2FYj8egKv34shWyaGV+MeQL+ri6QNKsXwpHB0JhNsxlW94DgTVl40OupvYL6LpHno4z8w2dXpMiXWy0wrWslXMapkpW1G/i/rbhHd9aNAvYDYC+KWlrhI69nyx0RbLB+9GsvJA/RUn4Lqa0JJNCWgFEY5KkBCYBjiz8elAjK8MOmSQV4ka5F5s0rWhnVxGI5toEvcGgHIbfnZAVnFdJOs1LPto9eRxNQWnJERjcP1cObkbzktyItc3eaPaoV8DMC7WnwDjOdKeDfREAySAaoaYxljpokwFYvNoFBkcyGUJ6A8sW1iwmwY7//tKUufgsg+f1q6TNSTIwJzW6fvsSa5ijGdak0QEFLBwJkn9pHWMyF4pr1/xx45Hap2IDzmULMmq4T+0UvHLM+SGG5m4/gzfkOUIczn/jTy9Bkdy+EYD4gptSyDpNzYK8OZVbuN25JrE/iuh9IAo1zU=
-  app: symfony-boilerplate
+  app: glacial-retreat-28903
   on:
     repo: vmonjaret/symfony-boilerplate
