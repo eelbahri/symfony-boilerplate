@@ -3,9 +3,11 @@ php:
 - '7.1'
 before_script:
 - composer install
+- composer require sensiolabs/security-checker
+- composer require squizlabs/php_codesniffer
 script:
-- docker run --rm -v $(pwd):/app phpqa/phpcs .
-- docker run --rm -v $(pwd):/app phpqa/security-checker security:check
+- ./vendor/bin/security-checker security:check
+- ./vendor/bin/phpcs
 notifications:
   email:
     on_success: change
