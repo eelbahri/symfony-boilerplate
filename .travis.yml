@@ -3,6 +3,9 @@ php:
 - '7.1'
 before_script:
 - composer install
+script:
+- docker run --rm -v $(pwd):/app phpqa/phpcs .
+- docker run --rm -v $(pwd):/app phpqa/security-checker security:check
 notifications:
   email:
     on_success: change
